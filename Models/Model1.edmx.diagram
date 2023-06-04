@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9d6f3d6874044d1599be626de44a2eea" Name="Diagram1">
+        <EntityTypeShape EntityType="S3G2PVFModel.Business" Width="1.5" PointX="8" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Customer" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Employee" Width="1.5" PointX="7.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Knowledge" Width="1.5" PointX="10" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Manufactures" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.OrderLine" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Product" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Production" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Productline" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Raw_Materials" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Sales_Person" Width="1.5" PointX="8" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Skill" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Supplies" Width="1.5" PointX="10.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Territory" Width="1.5" PointX="5.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Vendor" Width="1.5" PointX="8" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Work" Width="1.5" PointX="10" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="S3G2PVFModel.Work_center" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Business_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Business_Territory" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Knowledge_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Work_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Knowledge_Skill" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Manufactures_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Manufactures_Raw_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_OrderLine_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_OrderLine_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Product_Productline" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Production_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Production_Work_center" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Supplies_Raw_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Sales_Person_Territory" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Supplies_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="S3G2PVFModel.FK_Work_Work_center" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

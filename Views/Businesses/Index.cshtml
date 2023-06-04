@@ -1,0 +1,45 @@
+﻿@model IEnumerable<S3G2_PVFAPP.Models.Business>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Territory.TerritoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusinessValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Territory.TerritoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { customerID=item.CustomerID, territoryID = item.TerritoryID}) |
+            @Html.ActionLink("Details", "Details", new { customerID = item.CustomerID, territoryID = item.TerritoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { customerID = item.CustomerID, territoryID = item.TerritoryID })
+        </td>
+    </tr>
+}
+
+</table>

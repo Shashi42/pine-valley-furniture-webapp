@@ -1,0 +1,45 @@
+﻿@model IEnumerable<S3G2_PVFAPP.Models.OrderLine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderedQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderedQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { productID = item.ProductID, orderID = item.OrderID }) |
+            @Html.ActionLink("Details", "Details", new { productID = item.ProductID, orderID = item.OrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { productID = item.ProductID, orderID = item.OrderID })
+        </td>
+    </tr>
+}
+
+</table>

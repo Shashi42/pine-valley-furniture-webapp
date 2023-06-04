@@ -1,0 +1,66 @@
+﻿@model IEnumerable<S3G2_PVFAPP.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/TableDisplayStyles.css" rel="stylesheet" />
+<h2>Employees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADDRESS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupervisorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ADDRESS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZIPCODE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupervisorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.EmployeeID })" class="btn btn-dark">Edit</a>
+                <a href="@Url.Action("Details", new { id = item.EmployeeID })" class="btn btn-primary">Details</a>
+                <a href="@Url.Action("Delete", new { id = item.EmployeeID })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>

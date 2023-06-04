@@ -1,0 +1,29 @@
+﻿.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    color: white;
+    background: #4d331f;
+}
+
+/* provide some minimal visual accomodation for IE8 and below */
+
+.table tr {
+    background: #b8d1f3;
+}
+
+
+
+    /* ODD background rows */
+
+    .table tr:nth-child(odd) {
+        background: #e8bf8e;
+    }
+
+    /* EVEN background rows */
+
+    .table tr:nth-child(even) {
+        background: #e3a04f;
+    }
