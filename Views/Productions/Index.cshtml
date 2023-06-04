@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<link href="~/Content/TableDisplayStyles.css" rel="stylesheet" />
 <h2>Index</h2>
 
 <p>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.Work_center.WorkcenterName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { productID = item.ProductID, workcenterID = item.WorkcenterID }) |
-            @Html.ActionLink("Details", "Details", new { productID = item.ProductID, workcenterID = item.WorkcenterID }) |
-            @Html.ActionLink("Delete", "Delete", new { productID = item.ProductID, workcenterID = item.WorkcenterID })
+            <a href="@Url.Action("Edit", new { productID = item.ProductID, workcenterID = item.WorkcenterID })" class="btn btn-dark">Edit</a>
+            <a href="@Url.Action("Details", new { productID = item.ProductID, workcenterID = item.WorkcenterID })" class="btn btn-primary">Details</a>
+            <a href="@Url.Action("Delete", new { productID = item.ProductID, workcenterID = item.WorkcenterID })" class="btn btn-danger">Delete</a>
         </td>
     </tr>
 }
